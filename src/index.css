@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', -apple-system, BlinkMacSystemFont, 'Pretendard Variable', Pretendard, system-ui, Roboto, 'Noto Sans KR', sans-serif;
+}
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    /* Responsive fluid base typography: dynamically scales comfortably across devices from mobile (15px) up to 4K/large monitors (18px) */
+    font-size: clamp(15px, 0.92rem + 0.35vw, 18px);
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+  }
+
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Pretendard Variable', Pretendard, sans-serif;
+    background-color: #F8FAFC;
+    color: #1E293B;
+    letter-spacing: -0.022em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 1.58;
+    font-feature-settings: 'tnum' 1, 'cv05' 1, 'cv08' 1;
+  }
+
+  /* Headings typography enhancement */
+  h1, h2, h3, h4, h5, h6 {
+    color: #0F172A;
+    letter-spacing: -0.03em;
+    line-height: 1.35;
+    font-weight: 700;
+  }
+
+  /* Table and data numeral sharpness */
+  .tabular-nums, .font-mono-tabular {
+    font-family: 'JetBrains Mono', 'Apple SD Gothic Neo', 'Pretendard Variable', monospace;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  button, input, select, textarea {
+    font-family: inherit;
+    letter-spacing: inherit;
+  }
+
+  /* Font Themes - Apple SD Gothic Neo primary */
+  .font-apple-sd {
+    font-family: 'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', -apple-system, BlinkMacSystemFont, 'Pretendard Variable', Pretendard, system-ui, sans-serif !important;
+    letter-spacing: -0.022em;
+  }
+
+  /* Responsive fluid sizing for micro text so it remains crisp and easily readable on all screens */
+  .text-\[10px\] {
+    font-size: clamp(11.5px, 0.72rem + 0.15vw, 13px) !important;
+    line-height: 1.4 !important;
+  }
+  .text-\[11px\] {
+    font-size: clamp(12.5px, 0.78rem + 0.15vw, 14px) !important;
+    line-height: 1.4 !important;
+  }
+  .text-xs {
+    font-size: clamp(13px, 0.82rem + 0.16vw, 14.5px) !important;
+    line-height: 1.45 !important;
+  }
+  .text-sm {
+    font-size: clamp(14px, 0.88rem + 0.2vw, 16px) !important;
+  }
+  .text-base {
+    font-size: clamp(15.5px, 0.95rem + 0.25vw, 17.5px) !important;
+  }
+}
+
+/* Subtle elevation and card depth enhancements for clarity */
+.card-clean {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+}
+
+.card-clean-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-clean-hover:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
